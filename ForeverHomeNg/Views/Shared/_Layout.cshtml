@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forever Home</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <header>
+        <div>
+            <a href="@Url.Action("Index", "Home")">
+                <i class="glyphicon glyphicon-road"></i>&nbsp;The Road to a Forever Home
+            </a>
+        </div>
+        <div class="col-md-push-3">
+            <a href="@Url.Action("Index", "Story")">
+                <i class="glyphicon glyphicon-book"></i>&nbsp;Our Story
+            </a>            
+        </div>
+        <div class="col-md-push-3">
+            <a href="@Url.Action("Index", "Donate")">
+                <i class="glyphicon glyphicon-usd"></i>&nbsp;Donate
+            </a>
+        </div>
+    </header>
+    <main>
+        @RenderBody()
+    </main>
+    <footer>
+        <p>&copy; @DateTime.Now.Year - GreeneMonsters</p>
+    </footer>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
