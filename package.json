@@ -7,7 +7,8 @@
   },
   "license": "ISC",
   "devDependencies": {
-    "typings": "0.8.1" 
+    "gulp-cache-bust": "^1.1.0",
+    "typings": "0.8.1"
   },
   "dependencies": {
     "systemjs": "0.19.27",
