@@ -3,9 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForeverHome.Tests", "ForeverHome.Tests\ForeverHome.Tests.csproj", "{55B60B3E-EB9A-4BE2-B49F-32DB17569953}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForeverHomeNg", "ForeverHomeNg\ForeverHomeNg.csproj", "{DCDBF716-31D8-4D3E-96F0-13EA00E46CBC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForeverHome", "ForeverHome.csproj", "{DCDBF716-31D8-4D3E-96F0-13EA00E46CBC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,10 +11,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{55B60B3E-EB9A-4BE2-B49F-32DB17569953}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{55B60B3E-EB9A-4BE2-B49F-32DB17569953}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{55B60B3E-EB9A-4BE2-B49F-32DB17569953}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{55B60B3E-EB9A-4BE2-B49F-32DB17569953}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DCDBF716-31D8-4D3E-96F0-13EA00E46CBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DCDBF716-31D8-4D3E-96F0-13EA00E46CBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DCDBF716-31D8-4D3E-96F0-13EA00E46CBC}.Release|Any CPU.ActiveCfg = Release|Any CPU

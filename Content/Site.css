@@ -3,10 +3,14 @@
     flex-direction: column;
     height: 100vh;
     background-color: #f1f1f1;
+    font-family: Verdana,sans-serif;
 }
 
 header {
     display: flex;
+    display: -webkit-flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
     background-color: #fff;
     border-bottom: 1px solid #e7eaec;
     padding: 8px;
@@ -41,6 +45,7 @@ footer {
 .borderedboxlight {
     background-color: #fff;
     box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 2px 1px -1px rgba(0,0,0,0.12);
+    margin-bottom: 8px;
 }
 
 .waitloading {
@@ -60,3 +65,83 @@ footer {
         display: flex;
         flex: 1;
     }
+.menuButtons {
+    display: flex;
+    display: -webkit-flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+
+}
+
+@media (min-width: 1050px) {
+    .menuButton {
+        width: 33%;
+        max-width: 500px;
+        padding: 0px 30px;
+    }
+    .center {
+        margin-left: 50%;
+        width: 100%;
+        max-width: 1200px;
+    }
+    .prologue {
+        flex: 1;
+        padding: 15px 20px 15px 15px;
+        margin-bottom: 0px;
+        display: inline-block;    
+        margin-left: -500px;
+        max-width: 1000px;
+        background-color: white;
+        -webkit-border-radius: 2px; 
+        -moz-border-radius: 2px; 
+        border-radius: 2px; 
+        box-shadow: 0 3px 1px 0 #a6a6a6;
+        
+
+    }
+}
+
+@media (min-width: 600px)  and (max-width: 1050px){
+    .menuButton {
+        width: 33%;
+        max-width: 500px;
+        padding: 0px 30px;
+    }
+    .prologue {
+        padding: 15px 20px 15px 15px;
+        display: inline-block;    
+        background-color: white;
+        -webkit-border-radius: 2px; 
+        -moz-border-radius: 2px; 
+        border-radius: 2px; 
+        box-shadow: 0 3px 1px 0 #a6a6a6;
+    }
+}
+@media (max-width: 600px) {
+    .menuButton {
+        width: 100%;
+    }
+    .prologue {
+        max-width: 100%;
+        background-color: white;
+        -webkit-border-radius: 2px; 
+        -moz-border-radius: 2px; 
+        border-radius: 2px; 
+        box-shadow: 0 3px 1px 0 #a6a6a6;
+
+    }
+}
+
+
+
+h2 {
+    font-size: 17px;
+    font-weight: bold;
+}
+.music {
+    display: none;
+}
+
+.career {
+    display: none;
+}
