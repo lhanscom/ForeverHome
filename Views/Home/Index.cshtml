@@ -1,3 +1,20 @@
-﻿<div class="">
+﻿@model List<ForeverHomeNg.Controllers.AdoptionStep>
+<div class="">
     <img class="" style="height: 100%;" src="/Content/DenisJfkTall.jpg" />
-</div>
+    <table hidden="true"> @*Hide for now.*@
+        <tr>
+            <th>
+                @*@Html.DisplayNameFor(model => model.Title)*@
+                Title
+            </th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+            </tr>
+        }
+    </table>
+    </div>
