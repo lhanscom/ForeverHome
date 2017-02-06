@@ -139,6 +139,9 @@ footer {
 
     }
     .prologue {
+       display:flex;
+       flex-wrap:wrap;
+       flex:1;
         max-width: 100%;
         background-color: white;
         -webkit-border-radius: 2px; 
