@@ -94,6 +94,11 @@ footer {
         box-shadow: 0 3px 1px 0 #a6a6a6;
         font-size: calc(100% + 2vw);
         display:flex;
+        flex-wrap:wrap;
+        flex:1;      
+        -webkit-flex-flow: row wrap;
+        flex-flow: row wrap;
+
 
     }
 }
