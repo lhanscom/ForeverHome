@@ -58,14 +58,14 @@ namespace ForeverHomeNg.Controllers
                     Order = 4,
                     Title = "Facilitator",
                     Cost = 0,
-                    Description = "Ask about this cost Yana https://www.facebook.com/yana.deman.7"
+                    Description = "" //Ask about this cost Yana https://www.facebook.com/yana.deman.7
                 },
                 new AdoptionStep
                 {
                     Order = 5,
                     Title = "Child Matching (SDAPRC)",
                     Cost = 3000,
-                    Description = "Unknown cost, 3000 is for travel really"
+                    Description = "" //Unknown cost, 3000 is for travel really
                 },
                 new AdoptionStep
                 {
