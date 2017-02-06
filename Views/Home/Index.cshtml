@@ -1,20 +1,35 @@
-﻿@model List<ForeverHomeNg.Controllers.AdoptionStep>
+﻿@model ForeverHomeNg.Controllers.HomeModel
 <div class="">
-    <img class="" style="height: 100%;" src="/Content/DenisJfkTall.jpg" />
-    <table hidden="true"> @*Hide for now.*@
+    <div class="progress"><div class="progress-bar" style="width:@(Model.CompletedPercent)%"></div></div>
+    @*<img class="col-lg-4" style="" src="/Content/DenisJfkTall.jpg" />*@
+    <table class="col-lg-8" > @*Hide for now.*@
         <tr>
             <th>
                 @*@Html.DisplayNameFor(model => model.Title)*@
                 Title
             </th>
         </tr>
-        @foreach (var item in Model)
+        @foreach (var item in Model.AdoptionSteps)
         {
-            <tr>
-                <td>
+            @:<tr class="roadRow">
+                @:<td>
+                    
+                    @:<div class="roadTitle">
+                    if (item.Completed == true)
+                    {
+                        @:<i class='glyphicon glyphicon-thumbs-up'>
+                    }
+                    else
+                    {
+                        @:<i class='glyphicon glyphicon-hand-right'>
+                    }
+
                     @Html.DisplayFor(modelItem => item.Title)
-                </td>
-            </tr>
+                    @:</i></div>
+
+                    <div class="roadDetail">@Html.DisplayFor(modelItem => item.Description)</div>                    
+                @:</td>
+            @:</tr>
         }
     </table>
     </div>

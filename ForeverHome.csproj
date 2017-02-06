@@ -165,7 +165,7 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Content\Site-1.0.1.css" />
+    <Content Include="Content\Site-1.0.2.css" />
     <Content Include=".gitignore" />
     <None Include="readme.md" />
     <Content Include="Scripts\bootstrap.js" />

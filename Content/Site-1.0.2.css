@@ -74,6 +74,29 @@ footer {
 
 }
 
+@media (orientation: landscape) AND (max-width:1050px) {
+    .menuButton {
+        width: 33%;
+        max-width: 500px;
+        padding: 0px 30px;
+    }
+    .center {
+        width: 100%;
+        max-width: 100%
+    }
+
+    .prologue {
+        max-width: 100%;
+        background-color: white;
+        -webkit-border-radius: 2px; 
+        -moz-border-radius: 2px; 
+        border-radius: 2px; 
+        box-shadow: 0 3px 1px 0 #a6a6a6;
+        
+
+    }
+}
+
 @media (min-width: 1050px) {
     .menuButton {
         width: 33%;
@@ -102,7 +125,7 @@ footer {
     }
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 1050px) AND (orientation:portrait) {
     .menuButton {
         width: 100%;
         height: 75px;
@@ -137,4 +160,18 @@ h2 {
 
 .career {
     display: none;
+}
+
+.roadTitle {
+    font-size: 20px;
+}
+.roadDetail {
+    padding-left: 60px;
+}
+.roadRow {
+    padding: 20px 0px 20px 0px;
+}
+
+.progress-bar {
+    background-color: #428bca;
 }
