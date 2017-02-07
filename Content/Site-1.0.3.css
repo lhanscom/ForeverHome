@@ -3,7 +3,8 @@
     flex-direction: column;
     height: 100vh;
     background-color: #f1f1f1;
-    font-family: Verdana,sans-serif;    
+    font-family: Verdana,sans-serif;
+    font-size: 12pt;
 }
 
 header {
@@ -14,7 +15,7 @@ header {
     background-color: #fff;
     border-bottom: 1px solid #e7eaec;
     padding: 8px;
-    font-size: 20px;
+    font-size: 12pt;
 }
 
     header > div {
@@ -48,23 +49,7 @@ footer {
     margin-bottom: 8px;
 }
 
-.waitloading {
-    font-size: 26px;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-}
 
-.todolistcontent {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-}
-
-    .todolistcontent form {
-        display: flex;
-        flex: 1;
-    }
 .menuButtons {
     display: flex;
     display: -webkit-flex;
@@ -75,9 +60,6 @@ footer {
 }
 
 @media (orientation: landscape) AND (max-width:1050px) {
-    body {
-        font-size:calc(100% + 1vw);
-    }
     .menuButton {
         width: 33%;
         max-width: 500px;
@@ -95,7 +77,6 @@ footer {
         -moz-border-radius: 2px; 
         border-radius: 2px; 
         box-shadow: 0 3px 1px 0 #a6a6a6;
-        font-size: calc(100% + 1vw);
         display:flex;
         flex-wrap:wrap;
         flex:1;      
@@ -135,9 +116,6 @@ footer {
 }
 
 @media (max-width: 1050px) AND (orientation:portrait) {
-    body {
-        font-size:calc(100% + 2vw);
-    }
 
     .menuButton {
         width: 100%;
@@ -157,8 +135,6 @@ footer {
        flex:1;      
        -webkit-flex-flow: row wrap;
         flex-flow: row wrap;
-        
-        font-size: calc(100% + 2vw);
         max-width: 100%;
         background-color: white;
         -webkit-border-radius: 2px; 
@@ -171,7 +147,7 @@ footer {
 
 
 h2 {
-    font-size: 17px;
+    font-size: 17pt;
     font-weight: bold;
 }
 .music {
@@ -183,7 +159,7 @@ h2 {
 }
 
 .roadTitle {
-    font-size: 20px;
+    font-size: 20pt;
 }
 .roadDetail {
     padding-left: 60px;

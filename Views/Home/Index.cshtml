@@ -1,35 +1,36 @@
 ﻿@model ForeverHomeNg.Controllers.HomeModel
 <div class="">
-    <div class="progress"><div class="progress-bar" style="width:@(Model.CompletedPercent)%"></div></div>
-    @*<img class="col-lg-4" style="" src="/Content/DenisJfkTall.jpg" />*@
-    <table class="col-lg-8" > @*Hide for now.*@
+    <div>This is a long process, but we are under way. As I learn more, and as we progress, I'll update things here.</div>
+    <div class="progress">
+        <div class="progress-bar" style="width: @(Model.CompletedPercent)%"></div>
+    </div>
+    <table class="col-lg-8"> @*Hide for now.*@
         <tr>
             <th>
-                @*@Html.DisplayNameFor(model => model.Title)*@
-                Title
+                The Steps I know about:
             </th>
         </tr>
         @foreach (var item in Model.AdoptionSteps)
         {
             @:<tr class="roadRow">
-                @:<td>
-                    
-                    @:<div class="roadTitle">
-                    if (item.Completed == true)
-                    {
-                        @:<i class='glyphicon glyphicon-check'>
-                    }
-                    else
-                    {
-                        @:<i class='glyphicon glyphicon-unchecked'>
-                    }
+            @:<td>
 
-                    @Html.DisplayFor(modelItem => item.Title)
-                    @:</i></div>
+            @:<div class="roadTitle">
+            if (item.Completed == true)
+            {
+                @:<i class='glyphicon glyphicon-check'>
+            }
+            else
+            {
+                @:<i class='glyphicon glyphicon-unchecked'>
+            }
 
-                    <div class="roadDetail">@Html.DisplayFor(modelItem => item.Description)</div>                    
-                @:</td>
+            @Html.DisplayFor(modelItem => item.Title)
+            @:</i></div>
+
+            <div class="roadDetail">@Html.DisplayFor(modelItem => item.Description)</div>
+            @:</td>
             @:</tr>
         }
     </table>
-    </div>
+</div>
