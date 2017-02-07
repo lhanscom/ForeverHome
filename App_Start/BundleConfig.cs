@@ -23,9 +23,15 @@ namespace ForeverHomeNg
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/slidebars").Include(                      
+                      "~/Scripts/slidebars.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/menu").Include("~/Scripts/menu.js"));
+
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
-                      "~/Content/site-{version}.css"));
+                      "~/Content/site-{version}.css",
+                      "~/Content/slidebars.css"));
         }
     }
 }

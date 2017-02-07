@@ -10,37 +10,68 @@
     
     <style>
                                      
-                                 }
+                                 
     </style>
 </head>
-<body>
-<header>
-    <div class="menuButtons">
-        <div class="menuButton">
-            <a href="@Url.Action("Index", "Home")">
-                <i class="glyphicon glyphicon-road"></i>&nbsp;The Road
-            </a>
+<body >
+    <header>
+
+        <div class="js-toggle-left-slidebar menuToggle">
+            <i class="glyphicon glyphicon-list" ></i>
         </div>
-        <div class="menuButton">
-            <a href="@Url.Action("Index", "Story")">
-                <i class="glyphicon glyphicon-book"></i>&nbsp;Our Story
-            </a>
+        <div class="title">Forever Home</div>
+
+        <div class="menuButtons" off-canvas="slidebar-1 left push">
+            <div class="menuToggle js-close-left-slidebar"><i class="glyphicon glyphicon-list"></i></div>
+            <div class="menuButton">
+                <a href="@Url.Action("Index", "Home")">
+                    <i class="glyphicon glyphicon-road"></i>&nbsp;The Road
+                </a>
+            </div>
+            <div class="menuButton">
+                <a href="@Url.Action("Index", "Story")">
+                    <i class="glyphicon glyphicon-book"></i>&nbsp;Our Story
+                </a>
+            </div>
+            <div class="menuButton">
+                <a href="@Url.Action("Index", "Donate")">
+                    <i class="glyphicon glyphicon-usd"></i>&nbsp;Donate
+                </a>
+            </div>
         </div>
-        <div class="menuButton">
-            <a href="@Url.Action("Index", "Donate")">
-                <i class="glyphicon glyphicon-usd"></i>&nbsp;Donate
-            </a>
+        <div class="menuButtonsTop">            
+            <div class="menuButton">
+                <a href="@Url.Action("Index", "Home")">
+                    <i class="glyphicon glyphicon-road"></i>&nbsp;The Road
+                </a>
+            </div>
+            <div class="menuButton">
+                <a href="@Url.Action("Index", "Story")">
+                    <i class="glyphicon glyphicon-book"></i>&nbsp;Our Story
+                </a>
+            </div>
+            <div class="menuButton">
+                <a href="@Url.Action("Index", "Donate")">
+                    <i class="glyphicon glyphicon-usd"></i>&nbsp;Donate
+                </a>
+            </div>
         </div>
-    </div>
-</header>
-    <main>
+    </header>
+<main>
+    <div canvas="container">
         @RenderBody()
-    </main>
-    <footer>
-        <p>&copy; @DateTime.Now.Year - GreeneMonsters</p>
-    </footer>
+        <br />
+        <p class="footer col-xs-12">&copy; @DateTime.Now.Year - GreeneMonsters</p>
+    </div>
+    
+</main>
+
+
+
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/slidebars")
+    @Scripts.Render("~/bundles/menu")
     @RenderSection("scripts", required: false)
 </body>
 </html>
