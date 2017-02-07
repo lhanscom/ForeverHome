@@ -169,7 +169,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Global.asax" />
-    <Content Include="Content\Site-1.0.3.css" />
+    <Content Include="Content\Site-1.0.4.css" />
     <Content Include=".gitignore" />
     <None Include="readme.md" />
     <Content Include="Scripts\bootstrap.js" />
