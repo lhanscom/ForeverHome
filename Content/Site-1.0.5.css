@@ -125,7 +125,7 @@ h2 {
         flex-flow: row wrap;
     }
     
-@media (orientation: landscape) AND (max-width:810px) {
+@media (orientation: landscape) AND (max-width:1050px) {
     body {
         font-size: calc(2vw);
     }
@@ -142,7 +142,7 @@ h2 {
     }
 }
 
-@media (min-width: 810px) {
+@media (min-width: 1050px) {
 body {
     font-size: 12pt;
 }
@@ -193,7 +193,7 @@ body {
     }
     
 }
-@media (max-width: 810px) AND (orientation:portrait) {
+@media (max-width: 1050px) AND (orientation:portrait) {
 body {
     font-size: calc(3vw);
 }
