@@ -38,10 +38,12 @@ header {
 }
 main {
     flex: 1;
-    padding: 15px 20px 15px 15px;
+    padding: 15px 20px 15px 20px;
     margin-bottom: 0px;
-    overflow-y: auto;
-    display: block;
+    margin-left: 0px;
+    /*overflow-y: auto;*/
+    overflow: hidden;
+    display: flex;
     flex-flow: row wrap;
 }
 
@@ -77,12 +79,17 @@ main {
     flex-wrap: wrap;
 
 }
+.navbar-toggle {
+    float:left;
+    position: fixed;
+    resize: none;
+    z-index: 9999;
+    background-color: #428bca;
+    padding: 3px 5px 5px 3px;
+    margin: 3px 3px 3px 1px;
 
-.menuToggle {
-    padding: 5px 5px;
-    float: left;
-    max-width: 26px;
 }
+
 .js-close-left-slidebar {
     margin-left: 215px;
 }
@@ -118,17 +125,24 @@ h2 {
         flex-flow: row wrap;
     }
     
-@media (orientation: landscape) AND (max-width:1050px) {
-body {
-    font-size: calc(2vw);
-}
-    
+@media (orientation: landscape) AND (max-width:810px) {
+    body {
+        font-size: calc(2vw);
+    }
+
+    header {
+        display: none;
+    }    
     .menuButton {
         height: auto;
     }
+
+    .navbar-toggle {
+        display: block;
+    }
 }
 
-@media (min-width: 1050px) {
+@media (min-width: 810px) {
 body {
     font-size: 12pt;
 }
@@ -160,11 +174,10 @@ body {
         flex-flow: row wrap;
         flex-wrap: wrap;
     }
-
-    .menuToggle {
+    .navbar-toggle {
         display: none;
     }
-    
+   
 
     .center {
         margin-left: 50%;
@@ -180,9 +193,12 @@ body {
     }
     
 }
-@media (max-width: 1050px) AND (orientation:portrait) {
+@media (max-width: 810px) AND (orientation:portrait) {
 body {
     font-size: calc(3vw);
+}
+header {
+    display: none;
 }
     .menuButton {
         width: 100%;
@@ -199,8 +215,8 @@ body {
         display: none;
     }
 
-    .menuToggle {
-        display: inline;
+    .navbar-toggle {
+        display: block;
     }
     
 }
@@ -254,4 +270,9 @@ body {
     border-bottom: solid;
     border-bottom-color: #428bca;
     border-bottom-width: thin;
+    margin-bottom:10px;
+}
+
+[checked=checked]:before {
+    content: "\e067";
 }

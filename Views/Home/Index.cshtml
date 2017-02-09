@@ -1,65 +1,64 @@
 ﻿@model ForeverHomeNg.Controllers.HomeModel
-<div class="borderedboxlight">
-    <div class="homeStory">
-        <strong>Adoption.</strong>
-        <p>
-            It seems simple. There are kids that don't have a home, and families that would like to give them one.
-            A classic win win situation. Here's the thing though; It is <i class="exaggerate">supposed</i> to be incredibly expensive.
-        </p>
-        <p>
-            Jesus came here and modeled a life for us, showing us how to live in this world, and how to do it without corruption.
-            He chose to come here, knowing He was to be mocked, beaten, killed in a horrible manner, so that we would be <i class="exaggerate">eligible</i> for adoption.
-            He gave everything, but we had to say "yeah, I'd like to be adopted".
-            It seems to me that the way this adoption thing works is exactly as it should.
-            It's hard, frought with possible disappointments, frustrations, and financial woes.
-            At no time is any of it seem certain.
-            It still depends on someone deciding to change <i class="exaggerate">everything</i> in their life, both good, and bad.
-        </p>
-        <p class="keyPoint">Maybe that's the point. Maybe it's the struggle that builds the relationship; keeps us going when it gets hard later.</p>
-        <p>
-            Step 1: Lose job &nbsp;<i class="glyphicon glyphicon-check"></i>
-        </p>
-        <p>Hmm, that wasn't on my first list.</p>
-        <p>
-            I was reminded tonight of the story of Gideon. God keeps reducing the size of the army Gideon commanded so that when victory is had it can not be attributed
-            to the might of the army, but to God. Surprise! God wins. <i class="exaggerate">(If you don't believe me check out Judges 7)</i>
-        </p>
-        <p class="keyPoint">I'm not sure exactly what God is doing here, but I know it will be quite a ride.</p>
-    </div>
-    <br />
-    <div>We are under way. As I learn more, and as we progress, I'll update things here. 
-    While you wait, check out <a href="@Url.Action("Index", "Story")">Our Story</a>, or help us out with a <a href="@Url.Action("Index", "Donate")">Donation</a>. Thanks!</div>
-    <br />
-    <div class="progress" style="width: 90%; margin-left: 10px;">
-        <div class="progress-bar" style="width: @(Model.CompletedPercent)%"></div>
-    </div>
-    <table class=""> @*Hide for now.*@
-        <tr>
-            <th>
-                The Steps I know about:
-            </th>
-        </tr>
-        @foreach (var item in Model.AdoptionSteps)
-        {
-            @:<tr class="roadRow">
-            @:<td>
-
-            @:<div class="roadTitle">
-            if (item.Completed == true)
+    <div class="center">
+    <div class="prologue">
+        <div class="homeStory">
+            <strong>Adoption.</strong>
+            <p>
+                It seems simple. There are kids that don't have a home, and families that would like to give them one.
+                A classic win win situation. Here's the thing though; It is <i class="exaggerate">supposed</i> to be incredibly expensive.
+            </p>
+            <p>
+                Jesus came here and modeled a life for us, showing us how to live in this world, and how to do it without corruption.
+                He chose to come here, knowing He was to be mocked, beaten, killed in a horrible manner, so that we would be <i class="exaggerate">eligible</i> for adoption.
+                He gave everything, but we had to say "yeah, I'd like to be adopted".
+                It seems to me that the way this adoption thing works is exactly as it should.
+                It's hard, frought with possible disappointments, frustrations, and financial woes.
+                At no time is any of it seem certain.
+                It still depends on someone deciding to change <i class="exaggerate">everything</i> in their life, both good, and bad.
+            </p>
+            <p class="keyPoint">Maybe that's the point. </p>
+            <p class="keyPoint">Maybe it's the struggle that builds the relationship; keeps us going when it gets hard later.</p>
+        </div>
+        <div class="homeStory">
+            <p class="keyPoint">
+                Step 1: Lose job &nbsp;<i class="glyphicon glyphicon-check"></i>
+            </p>
+            <p>Hmm, that wasn't on my first list. Guess God has other ideas, cause here I am doing the whole unemployment thing.</p>
+            <p>
+                I was reminded tonight of the story of Gideon. God keeps reducing the size of the army Gideon commanded so that when victory is had it can not be attributed
+                to the might of the army, but to God. Surprise! God wins. <i class="exaggerate">(If you don't believe me check out Judges 7)</i>
+            </p>
+            <p class="keyPoint">I'm not sure exactly what God is doing, but I know it'll be quite a ride.</p>
+        </div>
+        <br />
+        <div>
+            We are under way. As I learn more, and as we progress, I'll update things here.
+            While you wait, check out <a href="@Url.Action("Index", "Story")">Our Story</a>, or help us out with a <a href="@Url.Action("Index", "Donate")">Donation</a>. Thanks!
+        </div>
+        <br />
+        <div class="progress" style="width: 90%; margin-left: 10px;">
+            <div class="progress-bar" style="width: @(Model.CompletedPercent)%"></div>
+        </div>
+        <table class="stepTable">
+            <tr>
+                <th>
+                    The Steps I know about:
+                </th>
+            </tr>
+            @foreach (var item in Model.AdoptionSteps)
             {
-                @:<i class='glyphicon glyphicon-check'>
+                
+                <tr class="roadRow">
+                    <td>
+                        <div class="roadTitle">
+                            <i class='glyphicon glyphicon-unchecked' checked="@item.Completed">
+                                @Html.DisplayFor(modelItem => item.Title)
+                            </i>
+                        </div>
+                        <div class="roadDetail">@Html.DisplayFor(modelItem => item.Description)</div>
+                    </td>
+                </tr>
             }
-            else
-            {
-                @:<i class='glyphicon glyphicon-unchecked'>
-            }
-
-            @Html.DisplayFor(modelItem => item.Title)
-            @:</i></div>
-
-            <div class="roadDetail">@Html.DisplayFor(modelItem => item.Description)</div>
-            @:</td>
-            @:</tr>
-        }
-    </table>
+        </table>
+    </div>
 </div>

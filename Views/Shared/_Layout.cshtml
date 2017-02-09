@@ -16,29 +16,12 @@
 <body >
     <header>
 
-        <div class="js-toggle-left-slidebar menuToggle">
+        @*<div class="js-toggle-left-slidebar menuToggle">
             <i class="glyphicon glyphicon-list" ></i>
-        </div>
+        </div>*@
         <div class="title">Forever Home</div>
 
-        <div class="menuButtons" off-canvas="slidebar-1 left push">
-            <div class="menuToggle js-close-left-slidebar"><i class="glyphicon glyphicon-list"></i></div>
-            <div class="menuButton">
-                <a href="@Url.Action("Index", "Home")">
-                    <i class="glyphicon glyphicon-road"></i>&nbsp;The Road
-                </a>
-            </div>
-            <div class="menuButton">
-                <a href="@Url.Action("Index", "Story")">
-                    <i class="glyphicon glyphicon-book"></i>&nbsp;Our Story
-                </a>
-            </div>
-            <div class="menuButton">
-                <a href="@Url.Action("Index", "Donate")">
-                    <i class="glyphicon glyphicon-usd"></i>&nbsp;Donate
-                </a>
-            </div>
-        </div>
+
         <div class="menuButtonsTop">            
             <div class="menuButton">
                 <a href="@Url.Action("Index", "Home")">
@@ -57,6 +40,25 @@
             </div>
         </div>
     </header>
+    <div class="menuButtons navbar" off-canvas="slidebar-1 left push">
+        @*<div class="menuToggle js-close-left-slidebar"><i class="glyphicon glyphicon-list"></i></div>*@
+        <div class="menuButton navbar-btn">
+            <a href="@Url.Action("Index", "Home")">
+                <i class="glyphicon glyphicon-road"></i>&nbsp;The Road
+            </a>
+        </div>
+        <div class="menuButton navbar-btn">
+            <a href="@Url.Action("Index", "Story")">
+                <i class="glyphicon glyphicon-book"></i>&nbsp;Our Story
+            </a>
+        </div>
+        <div class="menuButton navbar-btn">
+            <a href="@Url.Action("Index", "Donate")">
+                <i class="glyphicon glyphicon-usd"></i>&nbsp;Donate
+            </a>
+        </div>
+    </div>
+    <i class="js-toggle-left-slidebar navbar-toggle col-lg-1 glyphicon glyphicon-list"></i>
 <main>
     <div canvas="container">
         @RenderBody()
