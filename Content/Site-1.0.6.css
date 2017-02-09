@@ -123,6 +123,7 @@ h2 {
         flex:1;      
         -webkit-flex-flow: row wrap;
         flex-flow: row wrap;
+        margin-left: 20px;
     }
     
 @media (orientation: landscape) AND (max-width:1050px) {
